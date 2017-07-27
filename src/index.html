@@ -2,51 +2,51 @@
 <html lang="en">  
 <head>  
     <meta charset="UTF-8">  
-    <title>≥ÈΩ±”Œœ∑</title>  
+    <title>ÊäΩÂ•ñÊ∏∏Êàè</title>  
     <link rel="stylesheet" href="style.css">  
 </head>  
 <body ng-app="lottery">  
     <div ng-controller="ctrl_lottery" id="lottery">  
   
-        <!--step1  ◊“≥-->  
+        <!--step1 È¶ñÈ°µ-->  
         <div id="step1">  
-            <a class="start" ng-click=start()>ø™ º</a>  
+            <a class="start" ng-click=start()>ÂºÄÂßã</a>  
         </div>  
   
-        <!--step2 ≥ÈΩ±¡–±Ì-->  
+        <!--step2 ÊäΩÂ•ñÂàóË°®-->  
         <div id="step2" class="hide">  
             <div ng-repeat="item in items" id="{{item.id}}" class="item" ng-class="{'active':item.status}">   
-                <!--itemµƒstatusŒ™true ±£¨ÃÌº”classŒ™active-->  
+                <!--itemÁöÑstatus‰∏∫trueÊó∂ÔºåÊ∑ªÂä†class‰∏∫active-->  
                 {{item.name}}  
             </div>  
         </div>  
   
-        <!--step3 œ‘ æΩ·π˚“≥-->  
+        <!--step3 ÊòæÁ§∫ÁªìÊûúÈ°µ-->  
         <div id="step3" class="hide top">  
-            <a href="javascript:;" ng-click="reset()" class="reset">÷ÿ–¬ø™ º</a>  
-            <a href="javascript:;" ng-click="edit()" class="edit">–ﬁ∏ƒΩ±∆∑</a>  
+            <a href="javascript:;" ng-click="reset()" class="reset">ÈáçÊñ∞ÂºÄÂßã</a>  
+            <a href="javascript:;" ng-click="edit()" class="edit">‰øÆÊîπÂ•ñÂìÅ</a>  
             <button class="active">{{result}}</button>  
         </div>  
   
-        <!--step4 ÃÌº”–ﬁ∏ƒΩ±∆∑¡–±Ì-->  
+        <!--step4 Ê∑ªÂä†‰øÆÊîπÂ•ñÂìÅÂàóË°®-->  
         <div id="step4" class="hide top">  
-            <a href="javascript:;" ng-click="return()" class="reset">∑µªÿ</a>  
+            <a href="javascript:;" ng-click="return()" class="reset">ËøîÂõû</a>  
             <form action="">  
-                <input type="text" ng-model="name" required placeholder="√˚≥∆">  
-                <!-- <input type="text" class="btn" type="submit" value="ÃÌº”"> -->  
-                <a href="javascript:;" ng-click="add()">ÃÌº”</a>  
+                <input type="text" ng-model="name" required placeholder="ÂêçÁß∞">  
+                <!-- <input type="text" class="btn" type="submit" value="Ê∑ªÂä†"> -->  
+                <a href="javascript:;" ng-click="add()">Ê∑ªÂä†</a>  
             </form>  
             <ul>  
                 <li ng-repeat="item in items">  
                     <span>{{item.id}}</span>  
                     <span class="span">{{item.name}}</span>  
-                    <a href="javascript:;" ng-click="del(item.id)">…æ≥˝</a>  
+                    <a href="javascript:;" ng-click="del(item.id)">Âà†Èô§</a>  
                 </li>  
             </ul>  
         </div>  
     </div>  
     
-	<script src="angular.min.js"></script>  
+    <script src="angular.min.js"></script>  
     <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>  
     <script src="app.js"></script>  
 </body>  
